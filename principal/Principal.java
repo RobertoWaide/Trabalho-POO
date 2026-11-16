@@ -35,7 +35,6 @@ public class Principal {
             new BigDecimal("12.00")
         );
 
-        // Extensão do sistema: novo tipo de prato
         Prato diet = new PratoDiet(
             "Salada Fit",
             new BigDecimal("35.00"),
