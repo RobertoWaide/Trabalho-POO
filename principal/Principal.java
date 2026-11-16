@@ -35,6 +35,13 @@ public class Principal {
             new BigDecimal("12.00")
         );
 
+        // Extensão do sistema: novo tipo de prato
+        Prato diet = new PratoDiet(
+            "Salada Fit",
+            new BigDecimal("35.00"),
+            15
+        );
+
         System.out.println("\n=== CARDÁPIO ===");
 
         System.out.println(
@@ -50,6 +57,11 @@ public class Principal {
         System.out.println(
             especial.getNome() + ": R$ " +
             especial.calcularPreco()
+        );
+
+        System.out.println(
+            diet.getNome() + ": R$ " +
+            diet.calcularPreco()
         );
 
         System.out.println("\n=== TESTE DE EXCEÇÃO ===");
@@ -85,6 +97,7 @@ public class Principal {
         pedido1.adicionarPrato(executivo);
         pedido1.adicionarPrato(combo);
         pedido1.adicionarPrato(especial);
+        pedido1.adicionarPrato(diet);
 
         Pedido pedido2 = new Pedido(cliente2);
 
@@ -159,6 +172,7 @@ public class Principal {
         testarSubstituicao(executivo);
         testarSubstituicao(combo);
         testarSubstituicao(especial);
+        testarSubstituicao(diet);
 
     }
 
