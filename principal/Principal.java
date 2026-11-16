@@ -21,21 +21,18 @@ public class Principal {
             new BigDecimal("30.00"),
             20
         );
+
         Prato combo = new Combo(
             "Combo X-Burger",
             new BigDecimal("50.00"),
             15
         );
+
         Prato especial = new PratoEspecial(
             "Filé especial",
             new BigDecimal("40.00"),
             30,
             new BigDecimal("12.00")
-        );
-        Prato diet = new PratoDiet(
-            "Salada Fit",
-            new BigDecimal("35.00"),
-            15
         );
 
         System.out.println("\n=== CARDÁPIO ===");
@@ -44,17 +41,15 @@ public class Principal {
             executivo.getNome() + ": R$ " +
             executivo.calcularPreco()
         );
+
         System.out.println(
             combo.getNome() + ": R$ " +
             combo.calcularPreco()
         );
+
         System.out.println(
             especial.getNome() + ": R$ " +
             especial.calcularPreco()
-        );
-        System.out.println(
-            diet.getNome() + ": R$ " +
-            diet.calcularPreco()
         );
 
         System.out.println("\n=== TESTE DE EXCEÇÃO ===");
@@ -78,6 +73,7 @@ public class Principal {
             "Rua A",
             "99999-1111"
         );
+
         Cliente cliente2 = new Cliente(
             "Maria",
             "Rua B",
@@ -89,13 +85,11 @@ public class Principal {
         pedido1.adicionarPrato(executivo);
         pedido1.adicionarPrato(combo);
         pedido1.adicionarPrato(especial);
-        pedido1.adicionarPrato(diet);
 
         Pedido pedido2 = new Pedido(cliente2);
 
         pedido2.adicionarPrato(combo);
         pedido2.adicionarPrato(especial);
-
 
         ControlePedidos controle = new ControlePedidos();
 
@@ -107,16 +101,18 @@ public class Principal {
         System.out.println(
             "Cliente: " + pedido1.getCliente().getNome()
         );
+
         System.out.println(
             "Data: " + pedido1.getData()
         );
+
         System.out.println(
             "Quantidade de pratos: " + pedido1.getPratos().size()
         );
+
         System.out.println(
             "Total: R$ " + pedido1.calcularTotal()
         );
-
 
         System.out.println("\n=== CONTROLE DO RESTAURANTE ===");
 
@@ -163,7 +159,6 @@ public class Principal {
         testarSubstituicao(executivo);
         testarSubstituicao(combo);
         testarSubstituicao(especial);
-        testarSubstituicao(diet);
 
     }
 
